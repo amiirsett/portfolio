@@ -1,139 +1,154 @@
-<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
-<html lang="en"> <!-- Opens the HTML document and sets the language to English -->
-<head> <!-- Head section contains meta information and styles -->
-  <meta charset="UTF-8" /> <!-- Sets character encoding to UTF-8 for all characters -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Makes the website responsive on mobile -->
-  <title>AmiirSett</title> <!-- Title shown in the browser tab -->
-  <style> 
-    * { /* Universal selector for all elements */
-      margin: 0; /* Removes default margin */
-      padding: 0; /* Removes default padding */
-      box-sizing: border-box; /* Includes padding and border in element's total width/height */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    body { /* Styles for the body */
-      font-family: Arial, sans-serif; /* Sets font */
-      line-height: 1.6; /* Spacing between lines */
-      color: #333; /* Text color */
-      background-color: #f9f9f9; /* Page background color */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #f5f5f5; /* Light text */
+      background-color: #121212; /* Dark background */
     }
-    header { /* Header section */
-      background: #333; /* Dark background */
-      color: #fff; /* White text */
-      padding: 1rem 0; /* Top and bottom padding */
-      text-align: center; /* Centers text */
+    header {
+      background: #1e1e1e; /* Darker header */
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
     }
-    nav ul { /* Styles for the navigation menu list */
-      list-style: none; /* Removes bullet points */
-      display: flex; /* Displays list horizontally */
-      justify-content: center; /* Centers the menu items */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
     }
-    nav ul li { /* Individual menu item */
-      margin: 0 1rem; /* Space between menu items */
+    nav ul li {
+      margin: 0 1rem;
     }
-    nav ul li a { /* Navigation links */
-      color: #fff; /* Link color */
-      text-decoration: none; /* Removes underline */
-      font-weight: bold; /* Bold text */
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .container { /* Wrapper for content */
-      width: 80%; /* Sets content width to 80% of the page */
-      margin: 2rem auto; /* Adds space above and below and centers content */
+    nav ul li a:hover {
+      color: #00adb5; /* Hover accent color */
     }
-    .hero { /* Hero section (intro) */
-      text-align: center; /* Centers content */
-      padding: 2rem 0; /* Space above and below */
+    .container {
+      width: 80%;
+      margin: 2rem auto;
     }
-    .hero h1 { /* Hero heading */
-      font-size: 2.5rem; /* Larger font size */
-      margin-bottom: 1rem; /* Space below heading */
+    .hero {
+      text-align: center;
+      padding: 2rem 0;
     }
-    .hero p { /* Hero paragraph */
-      font-size: 1.2rem; /* Slightly larger text */
-      color: #555; /* Gray text */
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
     }
-    section { /* All section elements */
-      margin-bottom: 2rem; /* Space between sections */
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc; /* Slightly dimmer text */
     }
-    .projects { /* Project grid container */
-      display: grid; /* Creates a grid layout */
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-      gap: 1rem; /* Space between grid items */
+    section {
+      margin-bottom: 2rem;
     }
-    .project-card { /* Individual project cards */
-      background: #fff; /* White background */
-      padding: 1rem; /* Inner padding */
-      border: 1px solid #ddd; /* Light border */
-      border-radius: 8px; /* Rounded corners */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
-      text-align: center; /* Centers text */
+    h2 {
+      color: #00adb5; /* Accent heading color */
     }
-    footer { /* Footer section */
-      text-align: center; /* Centers content */
-      padding: 1rem; /* Space inside footer */
-      background: #333; /* Dark background */
-      color: #fff; /* White text */
-      margin-top: 2rem; /* Space above footer */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
     }
-    @media (max-width: 768px) { /* Media query for screens smaller than 768px */
-      nav ul { /* Navigation list */
-        flex-direction: column; /* Stack items vertically */
+    .project-card {
+      background: #1e1e1e; /* Dark card background */
+      padding: 1rem;
+      border: 1px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    .project-card h3 {
+      color: #fff;
+    }
+    .project-card p {
+      color: #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1e1e1e;
+      color: #fff;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
       }
-      nav ul li { /* Menu item spacing */
-        margin: 0.5rem 0; /* Vertical spacing */
+      nav ul li {
+        margin: 0.5rem 0;
       }
     }
   </style>
 </head>
-<body> <!-- Visible content starts here -->
-  <header> <!-- Header section -->
-    <nav> <!-- Navigation bar -->
-      <ul> <!-- Menu list -->
-        <li><a href="#home">Home</a></li> <!-- Link to Home section -->
-        <li><a href="#about">About</a></li> <!-- Link to About section -->
-        <li><a href="#projects">Projects</a></li> <!-- Link to Projects section -->
-        <li><a href="#contact">Contact</a></li> <!-- Link to Contact section -->
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="container"> <!-- Main content wrapper -->
-    <section class="hero" id="home"> <!-- Hero section with intro -->
-      <h1>Hello, I'm Amir Hazieq</h1> <!-- Main heading with your name -->
-      <p>Welcome to my portfolio website!</p> <!-- Intro text -->
+  <div class="container">
+    <section class="hero" id="home">
+      <h1>Hello, I'm [Your Name]</h1>
+      <p>Welcome to my portfolio website!</p>
     </section>
 
-    <section id="about"> <!-- About section -->
-      <h2>About Me</h2> <!-- Heading -->
-      <p>Write a short introduction about yourself, your skills, and your passion.</p> <!-- About text -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Write a short introduction about yourself, your skills, and your passion.</p>
     </section>
 
-    <section id="projects"> <!-- Projects section -->
-      <h2>My Projects</h2> <!-- Heading -->
-      <div class="projects"> <!-- Grid container for project cards -->
-        <div class="project-card"> <!-- Project card -->
-          <h3>Project 1</h3> <!-- Project title -->
-          <p>Brief description of this project.</p> <!-- Project description -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>Brief description of this project.</p>
         </div>
-        <div class="project-card"> <!-- Project card -->
-          <h3>Project 2</h3> <!-- Project title -->
-          <p>Brief description of this project.</p> <!-- Project description -->
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>Brief description of this project.</p>
         </div>
-        <div class="project-card"> <!-- Project card -->
-          <h3>Project 3</h3> <!-- Project title -->
-          <p>Brief description of this project.</p> <!-- Project description -->
+        <div class="project-card">
+          <h3>Project 3</h3>
+          <p>Brief description of this project.</p>
         </div>
       </div>
     </section>
 
-    <section id="contact"> <!-- Contact section -->
-      <h2>Contact Me</h2> <!-- Heading -->
-      <p>Email: amiirhazeeq096@gmail.com</p> <!-- Contact email -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: your.email@example.com</p>
       <p>LinkedIn: https://linkedin.com/in/amiirhazeeq | GitHub: https://github.com/amiirsett</p> <!-- Social links placeholder -->
     </section>
   </div>
 
-  <footer> <!-- Footer section -->
-    <p>&copy; 2025 amiirsett. All rights reserved.</p> <!-- Copyright -->
+  <footer>
+    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
   </footer>
 </body>
-</html> <!-- Ends HTML document -->
+</html>
+
+
