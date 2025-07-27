@@ -1,0 +1,139 @@
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Opens the HTML document and sets the language to English -->
+<head> <!-- Head section contains meta information and styles -->
+  <meta charset="UTF-8" /> <!-- Sets character encoding to UTF-8 for all characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Makes the website responsive on mobile -->
+  <title>AmiirSett</title> <!-- Title shown in the browser tab -->
+  <style> 
+    * { /* Universal selector for all elements */
+      margin: 0; /* Removes default margin */
+      padding: 0; /* Removes default padding */
+      box-sizing: border-box; /* Includes padding and border in element's total width/height */
+    }
+    body { /* Styles for the body */
+      font-family: Arial, sans-serif; /* Sets font */
+      line-height: 1.6; /* Spacing between lines */
+      color: #333; /* Text color */
+      background-color: #f9f9f9; /* Page background color */
+    }
+    header { /* Header section */
+      background: #333; /* Dark background */
+      color: #fff; /* White text */
+      padding: 1rem 0; /* Top and bottom padding */
+      text-align: center; /* Centers text */
+    }
+    nav ul { /* Styles for the navigation menu list */
+      list-style: none; /* Removes bullet points */
+      display: flex; /* Displays list horizontally */
+      justify-content: center; /* Centers the menu items */
+    }
+    nav ul li { /* Individual menu item */
+      margin: 0 1rem; /* Space between menu items */
+    }
+    nav ul li a { /* Navigation links */
+      color: #fff; /* Link color */
+      text-decoration: none; /* Removes underline */
+      font-weight: bold; /* Bold text */
+    }
+    .container { /* Wrapper for content */
+      width: 80%; /* Sets content width to 80% of the page */
+      margin: 2rem auto; /* Adds space above and below and centers content */
+    }
+    .hero { /* Hero section (intro) */
+      text-align: center; /* Centers content */
+      padding: 2rem 0; /* Space above and below */
+    }
+    .hero h1 { /* Hero heading */
+      font-size: 2.5rem; /* Larger font size */
+      margin-bottom: 1rem; /* Space below heading */
+    }
+    .hero p { /* Hero paragraph */
+      font-size: 1.2rem; /* Slightly larger text */
+      color: #555; /* Gray text */
+    }
+    section { /* All section elements */
+      margin-bottom: 2rem; /* Space between sections */
+    }
+    .projects { /* Project grid container */
+      display: grid; /* Creates a grid layout */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+      gap: 1rem; /* Space between grid items */
+    }
+    .project-card { /* Individual project cards */
+      background: #fff; /* White background */
+      padding: 1rem; /* Inner padding */
+      border: 1px solid #ddd; /* Light border */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+      text-align: center; /* Centers text */
+    }
+    footer { /* Footer section */
+      text-align: center; /* Centers content */
+      padding: 1rem; /* Space inside footer */
+      background: #333; /* Dark background */
+      color: #fff; /* White text */
+      margin-top: 2rem; /* Space above footer */
+    }
+    @media (max-width: 768px) { /* Media query for screens smaller than 768px */
+      nav ul { /* Navigation list */
+        flex-direction: column; /* Stack items vertically */
+      }
+      nav ul li { /* Menu item spacing */
+        margin: 0.5rem 0; /* Vertical spacing */
+      }
+    }
+  </style>
+</head>
+<body> <!-- Visible content starts here -->
+  <header> <!-- Header section -->
+    <nav> <!-- Navigation bar -->
+      <ul> <!-- Menu list -->
+        <li><a href="#home">Home</a></li> <!-- Link to Home section -->
+        <li><a href="#about">About</a></li> <!-- Link to About section -->
+        <li><a href="#projects">Projects</a></li> <!-- Link to Projects section -->
+        <li><a href="#contact">Contact</a></li> <!-- Link to Contact section -->
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container"> <!-- Main content wrapper -->
+    <section class="hero" id="home"> <!-- Hero section with intro -->
+      <h1>Hello, I'm Amir Hazieq</h1> <!-- Main heading with your name -->
+      <p>Welcome to my portfolio website!</p> <!-- Intro text -->
+    </section>
+
+    <section id="about"> <!-- About section -->
+      <h2>About Me</h2> <!-- Heading -->
+      <p>Write a short introduction about yourself, your skills, and your passion.</p> <!-- About text -->
+    </section>
+
+    <section id="projects"> <!-- Projects section -->
+      <h2>My Projects</h2> <!-- Heading -->
+      <div class="projects"> <!-- Grid container for project cards -->
+        <div class="project-card"> <!-- Project card -->
+          <h3>Project 1</h3> <!-- Project title -->
+          <p>Brief description of this project.</p> <!-- Project description -->
+        </div>
+        <div class="project-card"> <!-- Project card -->
+          <h3>Project 2</h3> <!-- Project title -->
+          <p>Brief description of this project.</p> <!-- Project description -->
+        </div>
+        <div class="project-card"> <!-- Project card -->
+          <h3>Project 3</h3> <!-- Project title -->
+          <p>Brief description of this project.</p> <!-- Project description -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact"> <!-- Contact section -->
+      <h2>Contact Me</h2> <!-- Heading -->
+      <p>Email: amiirhazeeq096@gmail.com</p> <!-- Contact email -->
+      <p>LinkedIn | GitHub</p> <!-- Social links placeholder -->
+    </section>
+  </div>
+
+  <footer> <!-- Footer section -->
+    <p>&copy; 2025 amiirsett. All rights reserved.</p> <!-- Copyright -->
+  </footer>
+</body>
+</html> <!-- Ends HTML document -->
