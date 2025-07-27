@@ -22,21 +22,23 @@
       padding: 1rem 0;
       text-align: center;
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
+    nav {
+      display: flex; /* Arrange nav links horizontally */
+      justify-content: center; /* Center the nav items */
+      gap: 1rem; /* Space between links */
     }
-    nav ul li {
-      margin: 0 1rem;
+    nav a {
+      background: #333; /* Button background */
+      color: #fff; /* Text color */
+      text-decoration: none; /* Remove underline */
+      font-weight: bold; /* Bold text */
+      padding: 0.5rem 1rem; /* Button padding */
+      border-radius: 5px; /* Rounded corners */
+      transition: background 0.3s; /* Smooth hover transition */
     }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav ul li a:hover {
-      color: #00adb5; /* Hover accent color */
+    nav a:hover {
+      background: #00adb5; /* Change background on hover */
+      color: #121212; /* Change text color on hover */
     }
     .container {
       width: 80%;
